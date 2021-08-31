@@ -34,30 +34,33 @@ const BookForm = ({addBook, updateBook, book}) => {
 
   return (
     <div>
-      <h1>{book ? "Edit" : "New"} Book</h1>
+      <h2 className="tight">{book ? "Edit" : "New"} Book</h2>
       <form onSubmit={handleSubmit}>
-        <p>Title</p>
+        <p className="tight">Title</p>
         <input 
           value={title}
           onChange={(attr) =>{
           setTitle(attr.target.value);
         }}
         />
-        <p>Author</p>
+        <p className="tight">Author</p>
         <input 
           value={author}
           onChange = {(attr) => {
           setAuthor(attr.target.value);
         }}
         />
-        <p>Description</p>
+        <p className="tight">Description</p>
         <input 
         value={description}
         onChange = {(attr) => {
           setDescription(attr.target.value);
         }}
         />
-        <button type="submit">Add</button>
+
+        <p>
+        <button className="App-link" type="submit">{book ? "Update" : "Add"}</button>
+        </p>
       </form>
     </div>
     )

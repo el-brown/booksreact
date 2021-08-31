@@ -15,17 +15,19 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 3vmin);
   color: white;
 }
 
 .App-link {
+  background-color: #282c34;
   color: #61dafb;
+  margin-bottom: 22px;
 }
 
 @keyframes App-logo-spin {
@@ -39,5 +41,16 @@
 
 .newbook {
   margin: 30px;
-  
+  padding: 40px;
+}
+
+.container {
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, .5) 0px 4px 12px;
+  padding: 30px;
+  margin: 40px;
+}
+
+.tight {
+  margin-bottom: 4px;
 }

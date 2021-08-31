@@ -41,11 +41,11 @@ const App = () => {
 
     return books.map((book) => {
       return (
-        <div style={styles.container} key={book.isbn}>
+        <div className="container" key={book.isbn}>
           <h1>{book.title}</h1>
           <h2> {book.author}</h2>
           <p>{book.description}</p>
-          <button onClick={() => deleteBook(book.isbn)}>Delete</button>
+          <button className="App-link" onClick={() => deleteBook(book.isbn)}>Delete</button>
           <BookForm updateBook={updateBook} book={book} />
         </div>
       );
@@ -53,23 +53,13 @@ const App = () => {
   };
 
   return (
-    <div className="newbook">
-      <h1>Here Dem Books</h1>
-      <BookForm addBook={addBook}/>
+    <div>
+      <h1 className="App-header">Here Dem Books</h1>
+      <p  className="App"><BookForm addBook={addBook}/></p>
       {renderBooks()}
     </div>
   );
 };
-
-const styles = {
-  container: {
-    // border: "1px solid",
-    boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
-    padding: "10px",
-    margin: "40px",
-  },
-};
-
 
 
 export default App;
