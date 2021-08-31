@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import BookForm from "./BookForm";
+import "./App.css";
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -52,7 +53,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="newbook">
       <h1>Here Dem Books</h1>
       <BookForm addBook={addBook}/>
       {renderBooks()}
